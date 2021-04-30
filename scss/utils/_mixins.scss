@@ -1,0 +1,12 @@
+@mixin d-flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin layout-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 5vw; 
+  margin-bottom: 7vw;
+}

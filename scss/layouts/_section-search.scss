@@ -1,0 +1,33 @@
+.search{
+  @include d-flex-center;
+  flex-direction: column;
+  text-align: center;
+  background-color: $bg-color-grey-dark ;
+    &__form{
+      @include d-flex-center;
+      padding: 3vw;
+      &>input{
+        background-color: transparent;
+        border: none;
+        width: 35%;
+      }
+      &>i{
+        margin: 0 3vw;
+      }
+    }
+    &__discover{
+      background-color: $bg-color-grey-light;
+  text-align: center;
+  padding: 10vw 3vw;
+    > h2{
+      margin-top: 0;
+    }
+     
+    }
+    
+  }
+
+  ::placeholder{
+    font-weight: bold;
+    color: black;
+  }

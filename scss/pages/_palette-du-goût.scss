@@ -1,0 +1,56 @@
+.menuRestaurant{
+  @include layout-section;
+  border-radius: 20px 20px 0 0 ;
+  background-color: lightgrey;
+  position: relative;
+  top: -20px;
+}
+
+.entrance{
+  &__layout{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+      &:hover:last-child{
+          transform: scale(1.2);
+        
+      }
+    &>p{
+      display: flex;
+      align-items: flex-end;
+      margin: 0.5em 0;
+    }
+    &__description{
+      width: 65%;
+      &>p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 00.5em 1em;
+      }
+        }
+        &__check{
+          background-color: $tertiary-color;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 20%;
+          
+        }
+    }
+}
+
+canvas{
+  height: 5px;
+  width: 15%;
+  background-color: $tertiary-color;
+  margin: 0.5em 0 20px 0;
+}
+
+h4{
+  margin: 0.5em 1em;
+}

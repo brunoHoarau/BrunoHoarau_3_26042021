@@ -14,10 +14,6 @@
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 20px;
-      &:hover:last-child{
-          transform: scale(1.2);
-        
-      }
     &>p{
       display: flex;
       align-items: flex-end;
@@ -31,17 +27,18 @@
         white-space: nowrap;
         margin: 00.5em 1em;
       }
-        }
+    }
         &__check{
           background-color: $tertiary-color;
-          color: white;
-          display: flex;
+          color: red;
+          display: none;
           align-items: center;
           justify-content: space-around;
           width: 20%;
-          
+        
         }
     }
+    
 }
 
 canvas{

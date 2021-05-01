@@ -1,7 +1,8 @@
 .search{
   @include d-flex-center;
   flex-direction: column;
-  text-align: center;
+  align-content: center;
+  // text-align: center;
   background-color: $bg-color-grey-dark ;
     &__form{
       @include d-flex-center;

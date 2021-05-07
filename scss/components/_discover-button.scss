@@ -1,7 +1,11 @@
 .search__discover__button{
-  border: none;
-  background: linear-gradient(349deg, $primary-color, $secondary-color);
+  @include button;
   padding: 5vw;
-  border-radius: 30px;
-  color: white;
   }
+
+.order__button{
+  @include button;
+  padding: 5vw 10vw;
+  font-weight: bolder;
+}
+

@@ -1,0 +1,13 @@
+.like{
+  &>.fas{
+    display: none;
+  }
+  &:hover{
+    .far{
+      display: none;
+    }
+    .fas{
+      display: block;
+    }
+  }
+}

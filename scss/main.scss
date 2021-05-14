@@ -6,12 +6,17 @@
 @import "./base/normalize";
 
 @import "./components/discover-button";
+@import "./components/order-button";
 @import "./components/hearts";
 
 
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/restaurant-card";
+@import "./layouts/restaurant-card-desktop";
 @import "./layouts/section-search";
+@import "./layouts/section-search-desktop";
 @import "./layouts/howorking";
+@import "./layouts/howworking-desktop";
 @import "./layouts/menu";
+@import "./layouts/menu-desktop";

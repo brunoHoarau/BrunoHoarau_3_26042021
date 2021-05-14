@@ -1,6 +1,11 @@
 .howorking{
   @include layout-section;
-  &__div{
+  &>ul{
+    &>li{
+      list-style: none;
+    }
+  }
+  &__a{
     display: flex;
     align-items: center;
     margin: 3vw;

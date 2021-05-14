@@ -1,0 +1,11 @@
+.order__button{
+  @include button;
+  padding: 5vw 10vw;
+  font-weight: bolder;
+}
+
+@media screen and ( min-device-width: 1024px ) {
+  .order__button{
+    padding: 15px 20px;
+  }
+}

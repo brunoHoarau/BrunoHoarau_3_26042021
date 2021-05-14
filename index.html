@@ -9,7 +9,6 @@
   <title>OhMyFood!</title>
 </head>
 <body>
-  <head>
     <header>
       <h1>Ohmyfood</h1>
     </header>
@@ -26,42 +25,49 @@
     </section>
     <section class="howorking">
       <h2>Fonctionnement</h2>
-        <div>
-          <a href="#" class="howorking__div">
-            <span class="howorking__div__span">1</span>
-            <i class="fas fa-mobile-alt fa-lg howorking__div__i"></i>
-            <p class="howorking__div__p">Choissisez un restaurant</p>
+      <ul>
+        <li>
+          <a href="#" class="howorking__a">
+            <span class="howorking__a__span">1</span>
+            <i class="fas fa-mobile-alt fa-lg howorking__a__i"></i>
+            <p class="howorking__a__p">Choissisez un restaurant</p>
           </a>
-        </div>
-        <div class="howorking__div">
-          <span class="howorking__div__span">2</span>
-          <i class="fas fa-mobile-alt fa-lg howorking__div__i"></i>
-          <p class="howorking__div__p">Composez votre menu</p>
-        </div>
-        <div class="howorking__div">
-          <span class="howorking__div__span">3</span>
-          <i class="fas fa-mobile-alt fa-lg howorking__div__i"></i>
-          <p class="howorking__div__p">Dégutez au restaurant</p>
-        </div>
+        </li>
+        <li>
+          <a href="#" class="howorking__a">
+            <span class="howorking__a__span">2</span>
+            <i class="fas fa-mobile-alt fa-lg howorking__a__i"></i>
+            <p class="howorking__a__p">Composez votre menu</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="howorking__a">
+            <span class="howorking__a__span">3</span>
+            <i class="fas fa-mobile-alt fa-lg howorking__a__i"></i>
+            <p class="howorking__a__p">Dégutez au restaurant</p>
+          </a>
+        </li>
+      </ul>
     </section>
     <section class="restaurants">
       <h2>restaurants</h2>
         <div class="restaurants__card" >
           <a href="./palette-du-gout.html">
-            <div class="restaurants__card__new">
+          <div class="restaurants__card__new">
               <p>Nouveau</p>
-            </div>
+          </div>
             <img src="./public/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du gout" class="restaurants__card__img">
-          </a>
-            <div class="restaurants__card__footer">
+          <div class="restaurants__card__footer">
               <div class="restaurants__card__footer__description">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
               </div>
-              <div class="restaurants__card__footer__heart">
+            </a>
+              <div class="like">
+                <i class="far fa-heart fa-lg"></i>
+                <i class="fas fa-heart fa-lg"></i>
               </div>
-              <i class="far fa-heart fa-lg"></i>
-            </div>
+          </div>
         </div>
         <div class="restaurants__card" >
           <a href="./la-note-enchantée.html">
@@ -74,11 +80,12 @@
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
               </div>
-              <div class="restaurants__card__footer__heart">
-                <i class="far fa-heart fa-lg"></i>
-              </div>
-            </div>
           </a>
+            <div class="like">
+            <i class="far fa-heart fa-lg"></i>
+            <i class="fas fa-heart fa-lg"></i>
+            </div>
+        </div>
         </div>
         <div class="restaurants__card" >
           <a href="./A-la-francaise.html">
@@ -91,11 +98,12 @@
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
               </div>
-              <div class="restaurants__card__footer__heart">
-                <i class="far fa-heart fa-lg"></i>
-              </div>
+            </a>
+            <div class="like">
+              <i class="far fa-heart fa-lg"></i>
+              <i class="fas fa-heart fa-lg"></i>
             </div>
-          </a>
+          </div>
         </div>
         <div class="restaurants__card" >
           <a href="./Le-délice-des-sens.html">
@@ -108,11 +116,12 @@
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
               </div>
-              <div class="restaurants__card__footer__heart">
-                <i class="far fa-heart fa-lg"></i>
+            </a>
+            <div class="like">
+              <i class="far fa-heart fa-lg"></i>
+              <i class="fas fa-heart fa-lg"></i>
               </div>
             </div>
-          </a>
         </div>
     </section>
     <footer>
@@ -123,6 +132,5 @@
         <p>Contact</p>
     </footer>
 
-  </head>
 </body>
 </html>

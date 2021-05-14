@@ -1,11 +1,6 @@
 .search__discover__button{
   @include button;
-  padding: 5vw;
+  padding: 15px 20px;
   }
 
-.order__button{
-  @include button;
-  padding: 5vw 10vw;
-  font-weight: bolder;
-}
 

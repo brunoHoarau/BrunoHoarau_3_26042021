@@ -1,19 +1,13 @@
+@media screen and ( min-device-width: 1024px) {
+  
+ h4{
+    @include ellipsis;
+  }
 .menuRestaurant{
-  @include layout-section;
-  border-radius: 20px 20px 0 0 ;
-  background-color: $bg-color-grey-light;
-  position: relative;
-  top: -20px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-
-ul{
-  padding: 0;
-}
-
-p{
-  font-size: 0.9em;
-}
 
 .header{
   &__a{
@@ -29,9 +23,7 @@ p{
 }
 
 .nameRestaurant{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-basis: 100%;
   &> h2{
     font-family: 'Shrikhand', cursive;
     font-weight: bold;
@@ -46,40 +38,13 @@ p{
     }
 }
 
-  &__layout{
-
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    margin-bottom: 10px;
-    
-    &>p{
-      display: flex;
-      align-items: flex-end;
-      width: 10%;
-    }
     &__description{
       width: 80%;
+      
       &>p{
         @include ellipsis;
-        margin: 0 0.5em 1em;
       }
     }
-        &__check{
-         @include check;
-         display: flex;
-         
-        }
-        &__check:active{
-          animation-duration: 2500ms;
-          animation-name: checkslide;
-          animation-timing-function: linear;
-          transform-origin: center right;
-        
-        }
-
     }
     
 }
@@ -90,7 +55,7 @@ p{
 }
 
 
-.box__layout:hover{
+.box__layout:active{
   .box__layout__description{
       animation: textoverflow linear 500ms both;
     }
@@ -104,6 +69,7 @@ p{
             animation-name: rotation-180;
             animation-duration: 1000ms;
             animation-timing-function: cubic-bezier(0, 0, 0.63, 1.04);
+
           }
   }
   
@@ -161,39 +127,3 @@ p{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-canvas{
-  height: 5px;
-  width: 15%;
-  background-color: $tertiary-color;
-  margin: 0.5em 0 0 0;
-}
-
-h4{
-  margin: 0.5em 1em;
-  font-weight: bolder;
-}

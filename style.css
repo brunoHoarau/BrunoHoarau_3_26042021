@@ -357,7 +357,7 @@ template {
   background: linear-gradient(349deg, #9356DC, #FF79DA);
   border-radius: 30px;
   color: white;
-  padding: 5vw;
+  padding: 15px 20px;
 }
 
 .order__button {
@@ -369,6 +369,11 @@ template {
   font-weight: bolder;
 }
 
+@media screen and (min-device-width: 1024px) {
+  .order__button {
+    padding: 15px 20px;
+  }
+}
 .like > .fas {
   display: none;
 }
@@ -377,6 +382,7 @@ template {
 }
 .like:hover .fas {
   display: block;
+  color: #9356DC;
 }
 
 header {
@@ -393,7 +399,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 5vw 7vw;
+  padding: 5vw;
   background-color: black;
   color: white;
 }
@@ -402,7 +408,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 5vw 7vw;
+  padding: 5vw;
   background-color: #f7f7f7;
 }
 .restaurants__card {
@@ -442,6 +448,18 @@ footer {
   height: auto;
 }
 
+@media screen and (min-device-width: 1024px) {
+  .restaurants > h2 {
+    display: flex;
+    flex-basis: 100%;
+  }
+  .restaurants__card__new {
+    left: 75%;
+  }
+  .restaurants__card__new > p {
+    font-weight: 900;
+  }
+}
 .search {
   display: flex;
   justify-content: center;
@@ -476,20 +494,31 @@ footer {
   color: black;
 }
 
+@media screen and (min-device-width: 1024px) {
+  .search__form > input {
+    width: auto;
+  }
+  .search__discover > h2 {
+    margin-top: 0;
+  }
+}
 .howorking {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 5vw 7vw;
+  padding: 5vw;
 }
-.howorking__div {
+.howorking > ul > li {
+  list-style: none;
+}
+.howorking__a {
   display: flex;
   align-items: center;
   margin: 3vw;
   background-color: #ededed;
   border-radius: 20px;
 }
-.howorking__div__span {
+.howorking__a__span {
   font-size: 0.8rem;
   padding: 2vw 3vw;
   border-radius: 50%;
@@ -497,27 +526,37 @@ footer {
   margin-left: -4vw;
   color: white;
 }
-.howorking__div__i {
+.howorking__a__i {
   margin: 8vw 5vw;
 }
-.howorking__div__p {
+.howorking__a__p {
   font-weight: 600;
 }
 
+@media screen and (min-device-width: 1024px) {
+  .howorking > ul {
+    display: flex;
+  }
+  .howorking > ul > li {
+    width: 33%;
+  }
+  .howorking__a__span {
+    margin-left: -3vw;
+    padding: 2vw 2.5vw;
+  }
+  .howorking__a__i {
+    margin: 4vw 2vw;
+  }
+}
 .menuRestaurant {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 5vw 7vw;
+  padding: 5vw;
   border-radius: 20px 20px 0 0;
   background-color: #f7f7f7;
   position: relative;
   top: -20px;
-}
-
-h2 {
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
 }
 
 ul {
@@ -542,6 +581,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.nameRestaurant > h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
 }
 
 .box__layout:nth-child(1) {
@@ -669,6 +712,122 @@ canvas {
 h4 {
   margin: 0.5em 1em;
   font-weight: bolder;
+}
+
+@media screen and (min-device-width: 1024px) {
+  h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .menuRestaurant {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .header__a {
+    position: absolute;
+    left: 5%;
+    transform: translateY(160%);
+  }
+
+  .imgtop {
+    height: 60%;
+  }
+
+  .nameRestaurant {
+    flex-basis: 100%;
+  }
+  .nameRestaurant > h2 {
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+  }
+
+  .box__layout:nth-child(1) {
+    animation: fadein 1s linear 0s both;
+  }
+  .box__layout:nth-child(2) {
+    animation: fadein 2s linear 1s both;
+  }
+  .box__layout:nth-child(3) {
+    animation: fadein 3s linear 2s both;
+  }
+  .box__layout:nth-child(4) {
+    animation: fadein 4s linear 3s both;
+  }
+  .box__description {
+    width: 80%;
+  }
+  .box__description > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.check2 {
+  background-color: #99E2D0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 0%;
+  margin-left: -10%;
+}
+
+.box__layout:active .box__layout__description {
+  animation: textoverflow linear 500ms both;
+}
+.box__layout:active .check2 {
+  animation-duration: 500ms;
+  animation-name: checkslide;
+  animation-timing-function: linear;
+  transform-origin: center right;
+  animation-fill-mode: both;
+}
+.box__layout:active .check2 > i {
+  animation-name: rotation-180;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0, 0, 0.63, 1.04);
+}
+
+.order {
+  margin: auto;
+}
+.order > button {
+  width: 100%;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textoverflow {
+  100% {
+    width: 65%;
+  }
+}
+@keyframes checkslide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+    width: 20%;
+    margin-left: 0%;
+  }
+}
+@keyframes rotation-180 {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

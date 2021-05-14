@@ -1,0 +1,17 @@
+@media screen and (min-device-width: 1024px){
+  .search{
+    
+    &__form{
+      &>input{
+        width: auto;
+      }
+    }
+    &__discover{
+      > h2{
+        margin-top: 0;
+      }
+    }
+    
+  }
+  
+}

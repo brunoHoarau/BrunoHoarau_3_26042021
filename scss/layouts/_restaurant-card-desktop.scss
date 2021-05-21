@@ -1,17 +1,22 @@
 @media screen and (min-device-width : 1024px ){
 .restaurants{
-  // flex-direction: row;
-  // flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   &>h2{
     display: flex;
     flex-basis: 100%;
   }
     &__card{
+      width: 20vw;
+      height: auto;
+      &__img{
+        height: 20vw;
+      }
         &__new{
-          left: 75%;
-          &>p{
-            font-weight: 900;
-          }
+          margin: 1% 0% 1% 12%;
+          padding: 1vw;
+          left: auto;
+          
         }
         
     }

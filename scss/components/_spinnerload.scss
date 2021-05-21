@@ -1,0 +1,49 @@
+.spinnerload{
+  color: $primary-color;
+  transform: scale(0);
+  position: fixed;
+  display: inline;
+  margin: auto;
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  animation: 1s ease-in 3 backwards spinnanim;
+  background-image: linear-gradient(
+    $primary-color,
+    $secondary-color,
+    $tertiary-color);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+
+
+@keyframes spinnanim {
+  0% {
+    opacity: 1;
+    transform: rotate(00deg) scale(9);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(360deg) scale(9);
+  }
+
+}
+
+@keyframes display {
+  0%{
+    transform: scaleY(0);
+    height: 0;
+  }
+  99%{
+  transform: scaleY(0);
+height: auto;}
+  100%{
+  transform: scaleY(1);
+  height: auto;
+}
+  
+}

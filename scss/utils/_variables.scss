@@ -4,3 +4,7 @@ $tertiary-color: #99E2D0;
 $bg-color-grey-light: rgb(247, 247, 247);
 $bg-color-grey-dark: rgb(237, 237, 237);
 $primary-gradiente: linear-gradient(349deg, $primary-color, $secondary-color);
+$shadow-color: #a1a1a1;
+$dark-shadow-color: #5c5c5c;
+$box-shadow: 0px 0px 17px 0px $shadow-color;
+$dark-box-shadow: 0px 0px 20px 0px $dark-shadow-color;

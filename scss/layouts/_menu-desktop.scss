@@ -1,21 +1,32 @@
 @media screen and ( min-device-width: 1024px) {
   
+  .header{
+    &__a{
+      position: absolute;
+      left: 5%;
+      transform: translateY(160%);
+    }
+  
+  }
+  
  h4{
     @include ellipsis;
   }
+
+.restaurant__head__img{
+  height: 35vw;
+}
 .menuRestaurant{
   flex-wrap: wrap;
   flex-direction: row;
 }
 
 
-.header{
-  &__a{
-    position: absolute;
-    left: 5%;
-    transform: translateY(160%);
+.box{
+  width: 30%;
+  &__layout > p{
+    width: 15%;
   }
-
 }
 
 .imgtop{
@@ -30,24 +41,6 @@
   }
 }
 
-.box{
-
-  @for $i from 1 through 4 {
-    &__layout:nth-child(#{$i}) {
-      animation: fadein #{$i}s linear $i - 1 + s both;
-    }
-}
-
-    &__description{
-      width: 80%;
-      
-      &>p{
-        @include ellipsis;
-      }
-    }
-    }
-    
-}
 
 .check2{
   @include check;
@@ -55,41 +48,15 @@
 }
 
 
-.box__layout:active{
-  .box__layout__description{
-      animation: textoverflow linear 500ms both;
-    }
-  .check2{
-          animation-duration: 500ms;
-          animation-name: checkslide;
-          animation-timing-function: linear;
-          transform-origin: center right;
-          animation-fill-mode: both;
-          &>i{
-            animation-name: rotation-180;
-            animation-duration: 1000ms;
-            animation-timing-function: cubic-bezier(0, 0, 0.63, 1.04);
-
-          }
-  }
-  
-}
 
 .order{
-  margin: auto;
+  display: flex;
+  flex-basis: 100%;
   &>button{
-    width: 100%;
+    margin: auto
   };
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
 
 @keyframes textoverflow {
   0% {
@@ -121,9 +88,4 @@
   }
   
 }
-
-
-
-
-
-
+}

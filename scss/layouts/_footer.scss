@@ -1,5 +1,25 @@
 footer{
+  animation: display 3s linear 1 both;
   @include layout-section;
-  background-color:black;
-  color: white;
+  padding-top: 30px;
+  background-color: rgb(60, 60, 60);
+  > h2{
+    color: white;
+    font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
+    margin-top: 0;
+  }
+  &>div{
+    display: flex;
+  }
+  &>div, i{
+    margin-right: 10px;
+   
+  }
+  &>div, a{
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
 }

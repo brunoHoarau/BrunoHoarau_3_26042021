@@ -18,14 +18,18 @@
     }
     &__discover{
       background-color: $bg-color-grey-light;
-  text-align: center;
-  padding: 10vw 3vw;
-    > h2{
+      text-align: center;
+      padding: 50px 3vw;
+      > h2{
       margin-top: 0;
     }
-     
+    > p{
+      font-size: 1em;
     }
     
+  }
+  
+  animation: display 3s linear 1 both;
   }
 
   ::placeholder{

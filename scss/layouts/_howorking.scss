@@ -1,6 +1,8 @@
 .howorking{
+  animation: display 3s linear 1 both;
   @include layout-section;
   &>ul{
+    margin-top: 0;
     &>li{
       list-style: none;
     }

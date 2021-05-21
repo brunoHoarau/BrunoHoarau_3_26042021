@@ -1,8 +1,23 @@
 .order__button{
   @include button;
-  padding: 5vw 10vw;
+  padding: 18px 50px;
   font-weight: bolder;
+  box-shadow: $box-shadow;
 }
+.order__button:hover{
+  box-shadow: $dark-box-shadow;
+}
+
+.search__discover__button{
+  @include button;
+  box-shadow: $box-shadow;
+}
+
+.search__discover__button:hover{
+  box-shadow: $dark-box-shadow;
+}
+
+
 
 @media screen and ( min-device-width: 1024px ) {
   .order__button{

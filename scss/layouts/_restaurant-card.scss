@@ -1,12 +1,13 @@
 .restaurants{
+  animation: display 3s linear 1 both;
   // @include d-flex-center;
   @include layout-section;
   background-color: $bg-color-grey-light;
     &__card{
       border-radius: 15px;
       overflow: hidden;
-      -webkit-box-shadow: 0px 8px 32px -3px #000000; 
-      box-shadow: 0px 8px 32px -3px #000000;
+      -webkit-box-shadow: 1px 2px 17px -3px #a1a1a1; 
+      box-shadow: 1px 2px 17px -3px #a1a1a1;
       margin: 0 auto 20px;
         &__new{
           position: absolute;
@@ -16,14 +17,18 @@
           background-color: #99E2D0;
           color: $dark-tertiary-color;
           margin: 5%;
-          padding: 2vw;
-          height: 2%;
-          left: 60%;
+          padding: 2vw 3vw;
+          height: 10px;
+          left: 63%;
+          & p{
+            font-weight: bolder;
+            font-size: larger;
+          }
         }
         &__img{
           width: 100%;
           object-fit: cover;
-          height: 50vw;
+          height: 45vw;
 
         }
         &__footer{

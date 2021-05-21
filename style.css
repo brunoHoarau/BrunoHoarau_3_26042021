@@ -11,6 +11,8 @@ a {
 
 h3 {
   margin: 0;
+  font-size: medium;
+  margin-bottom: -5px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -365,8 +367,25 @@ template {
   background: linear-gradient(349deg, #9356DC, #FF79DA);
   border-radius: 30px;
   color: white;
-  padding: 5vw 10vw;
+  padding: 18px 50px;
   font-weight: bolder;
+  box-shadow: 0px 0px 17px 0px #a1a1a1;
+}
+
+.order__button:hover {
+  box-shadow: 0px 0px 20px 0px #5c5c5c;
+}
+
+.search__discover__button {
+  border: none;
+  background: linear-gradient(349deg, #9356DC, #FF79DA);
+  border-radius: 30px;
+  color: white;
+  box-shadow: 0px 0px 17px 0px #a1a1a1;
+}
+
+.search__discover__button:hover {
+  box-shadow: 0px 0px 20px 0px #5c5c5c;
 }
 
 @media screen and (min-device-width: 1024px) {
@@ -385,6 +404,48 @@ template {
   color: #9356DC;
 }
 
+.spinnerload {
+  color: #9356DC;
+  transform: scale(0);
+  position: fixed;
+  display: inline;
+  margin: auto;
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  animation: 1s ease-in 3 backwards spinnanim;
+  background-image: linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@keyframes spinnanim {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(9);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(9);
+  }
+}
+@keyframes display {
+  0% {
+    transform: scaleY(0);
+    height: 0;
+  }
+  99% {
+    transform: scaleY(0);
+    height: auto;
+  }
+  100% {
+    transform: scaleY(1);
+    height: auto;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -396,26 +457,46 @@ header h1 {
 }
 
 footer {
+  animation: display 3s linear 1 both;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5vw;
-  background-color: black;
+  padding: 40px 5vw;
+  padding-top: 30px;
+  background-color: #3c3c3c;
+}
+footer > h2 {
   color: white;
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  margin-top: 0;
+}
+footer > div {
+  display: flex;
+}
+footer > div, footer i {
+  margin-right: 10px;
+}
+footer > div, footer a {
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .restaurants {
+  animation: display 3s linear 1 both;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5vw;
+  padding: 40px 5vw;
   background-color: #f7f7f7;
 }
 .restaurants__card {
   border-radius: 15px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 8px 32px -3px #000000;
-  box-shadow: 0px 8px 32px -3px #000000;
+  -webkit-box-shadow: 1px 2px 17px -3px #a1a1a1;
+  box-shadow: 1px 2px 17px -3px #a1a1a1;
   margin: 0 auto 20px;
 }
 .restaurants__card__new {
@@ -426,14 +507,18 @@ footer {
   background-color: #99E2D0;
   color: #4acbab;
   margin: 5%;
-  padding: 2vw;
-  height: 2%;
-  left: 60%;
+  padding: 2vw 3vw;
+  height: 10px;
+  left: 63%;
+}
+.restaurants__card__new p {
+  font-weight: bolder;
+  font-size: larger;
 }
 .restaurants__card__img {
   width: 100%;
   object-fit: cover;
-  height: 50vw;
+  height: 45vw;
 }
 .restaurants__card__footer {
   display: flex;
@@ -449,15 +534,34 @@ footer {
 }
 
 @media screen and (min-device-width: 1024px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .restaurants > h2 {
     display: flex;
     flex-basis: 100%;
   }
-  .restaurants__card__new {
-    left: 75%;
+  .restaurants__card {
+    width: 20vw;
+    height: auto;
   }
-  .restaurants__card__new > p {
-    font-weight: 900;
+  .restaurants__card__img {
+    height: 20vw;
+  }
+  .restaurants__card__new {
+    margin: 1% 0% 1% 12%;
+    padding: 1vw;
+    left: auto;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .restaurants__card {
+    margin: 0 0 20px;
+  }
+  .restaurants__card__new {
+    margin: 3% 0% 5% 12%;
+    padding: 3vw;
   }
 }
 .search {
@@ -466,6 +570,7 @@ footer {
   flex-direction: column;
   align-content: center;
   background-color: #ededed;
+  animation: display 3s linear 1 both;
 }
 .search__form {
   display: flex;
@@ -483,10 +588,13 @@ footer {
 .search__discover {
   background-color: #f7f7f7;
   text-align: center;
-  padding: 10vw 3vw;
+  padding: 50px 3vw;
 }
 .search__discover > h2 {
   margin-top: 0;
+}
+.search__discover > p {
+  font-size: 1em;
 }
 
 ::placeholder {
@@ -502,11 +610,20 @@ footer {
     margin-top: 0;
   }
 }
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .search__form > input {
+    width: auto;
+  }
+}
 .howorking {
+  animation: display 3s linear 1 both;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5vw;
+  padding: 40px 5vw;
+}
+.howorking > ul {
+  margin-top: 0;
 }
 .howorking > ul > li {
   list-style: none;
@@ -548,23 +665,34 @@ footer {
     margin: 4vw 2vw;
   }
 }
+.imgtop {
+  height: 60%;
+}
+.imgtop__img {
+  width: 100%;
+  object-fit: cover;
+  height: 50vw;
+}
+
 .menuRestaurant {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5vw;
-  border-radius: 20px 20px 0 0;
+  padding: 40px 5vw;
+  padding-top: 0;
+  border-radius: 40px 40px 0 0;
   background-color: #f7f7f7;
   position: relative;
-  top: -20px;
+  top: -55px;
 }
 
 ul {
   padding: 0;
+  margin-bottom: 30px;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .header__a {
@@ -573,31 +701,29 @@ p {
   transform: translateY(160%);
 }
 
-.imgtop {
-  height: 60%;
-}
-
 .nameRestaurant {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px 4vw 15px;
 }
 .nameRestaurant > h2 {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
+  font-size: x-large;
 }
 
 .box__layout:nth-child(1) {
-  animation: fadein 1s linear 0s both;
+  animation: fadein 1s linear 0.7s both;
 }
 .box__layout:nth-child(2) {
-  animation: fadein 2s linear 1s both;
+  animation: fadein 1s linear 1s both;
 }
 .box__layout:nth-child(3) {
-  animation: fadein 3s linear 2s both;
+  animation: fadein 1.5s linear 1.5s both;
 }
 .box__layout:nth-child(4) {
-  animation: fadein 4s linear 3s both;
+  animation: fadein 2s linear 2s both;
 }
 .box__layout {
   display: flex;
@@ -605,7 +731,8 @@ p {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 17px 0px #a1a1a1;
 }
 .box__layout > p {
   display: flex;
@@ -614,12 +741,13 @@ p {
 }
 .box__layout__description {
   width: 80%;
+  padding: 0.4em;
 }
 .box__layout__description > p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin: 0 0.5em 1em;
+  margin: 0 0 0.5em 0.5em;
 }
 .box__layout__check {
   background-color: #99E2D0;
@@ -665,18 +793,17 @@ p {
 }
 
 .order {
-  margin: auto;
-}
-.order > button {
-  width: 100%;
+  margin: 20px auto;
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
+    margin-top: 20px;
   }
   100% {
     opacity: 1;
+    margin-top: 0px;
   }
 }
 @keyframes textoverflow {
@@ -703,22 +830,34 @@ p {
   }
 }
 canvas {
-  height: 5px;
-  width: 15%;
+  height: 3px;
+  width: 12%;
   background-color: #99E2D0;
-  margin: 0.5em 0 0 0;
 }
 
 h4 {
-  margin: 0.5em 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0.5em 0 0.5em 0.5em;
   font-weight: bolder;
 }
 
 @media screen and (min-device-width: 1024px) {
+  .header__a {
+    position: absolute;
+    left: 5%;
+    transform: translateY(160%);
+  }
+
   h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .restaurant__head__img {
+    height: 35vw;
   }
 
   .menuRestaurant {
@@ -726,10 +865,11 @@ h4 {
     flex-direction: row;
   }
 
-  .header__a {
-    position: absolute;
-    left: 5%;
-    transform: translateY(160%);
+  .box {
+    width: 30%;
+  }
+  .box__layout > p {
+    width: 15%;
   }
 
   .imgtop {
@@ -744,89 +884,51 @@ h4 {
     font-weight: bold;
   }
 
-  .box__layout:nth-child(1) {
-    animation: fadein 1s linear 0s both;
+  .check2 {
+    background-color: #99E2D0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 0%;
+    margin-left: -10%;
   }
-  .box__layout:nth-child(2) {
-    animation: fadein 2s linear 1s both;
-  }
-  .box__layout:nth-child(3) {
-    animation: fadein 3s linear 2s both;
-  }
-  .box__layout:nth-child(4) {
-    animation: fadein 4s linear 3s both;
-  }
-  .box__description {
-    width: 80%;
-  }
-  .box__description > p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-.check2 {
-  background-color: #99E2D0;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 0%;
-  margin-left: -10%;
-}
 
-.box__layout:active .box__layout__description {
-  animation: textoverflow linear 500ms both;
-}
-.box__layout:active .check2 {
-  animation-duration: 500ms;
-  animation-name: checkslide;
-  animation-timing-function: linear;
-  transform-origin: center right;
-  animation-fill-mode: both;
-}
-.box__layout:active .check2 > i {
-  animation-name: rotation-180;
-  animation-duration: 1000ms;
-  animation-timing-function: cubic-bezier(0, 0, 0.63, 1.04);
-}
+  .order {
+    display: flex;
+    flex-basis: 100%;
+  }
+  .order > button {
+    margin: auto;
+  }
 
-.order {
-  margin: auto;
-}
-.order > button {
-  width: 100%;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
+  @keyframes textoverflow {
+    100% {
+      width: 65%;
+    }
   }
-  100% {
-    opacity: 1;
+  @keyframes checkslide {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+      width: 20%;
+      margin-left: 0%;
+    }
   }
-}
-@keyframes textoverflow {
-  100% {
-    width: 65%;
-  }
-}
-@keyframes checkslide {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-    width: 20%;
-    margin-left: 0%;
+  @keyframes rotation-180 {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
-@keyframes rotation-180 {
-  0% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(0deg);
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .imgtop {
+    height: 50%;
   }
 }
 

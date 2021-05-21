@@ -1,18 +1,28 @@
-.menuRestaurant{
+.imgtop{
+  height: 60%;
+  &__img{
+    width: 100%;
+    object-fit: cover;
+    height: 50vw;
+  }
+}
+  .menuRestaurant{
   @include layout-section;
-  border-radius: 20px 20px 0 0 ;
+  padding-top: 0;
+  border-radius: 40px 40px 0 0 ;
   background-color: $bg-color-grey-light;
   position: relative;
-  top: -20px;
+  top: -55px;
 }
 
 
 ul{
   padding: 0;
+  margin-bottom: 30px;
 }
 
 p{
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .header{
@@ -24,17 +34,17 @@ p{
 
 }
 
-.imgtop{
-  height: 60%;
-}
+
 
 .nameRestaurant{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px 4vw 15px;
   &> h2{
     font-family: 'Shrikhand', cursive;
     font-weight: bold;
+    font-size: x-large;
   }
 }
 
@@ -42,9 +52,20 @@ p{
 
   @for $i from 1 through 4 {
     &__layout:nth-child(#{$i}) {
-      animation: fadein #{$i}s linear $i - 1 + s both;
+      @if (#{$i} == "1"){
+        animation: fadein #{$i}s linear $i - 0.3 + s both;
+      } @else {
+        animation: fadein $i - 0.5*$i + s linear $i - 0.5*$i + s both;
+      }
     }
 }
+  
+
+// @for $i from 1 through 4 {
+//     &__layout:nth-child(#{$i}) {
+//       animation: fadein #{$i}s linear $i - 1 + s both;
+//     }
+// }
 
   &__layout{
 
@@ -53,7 +74,8 @@ p{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    box-shadow: $box-shadow;
     
     &>p{
       display: flex;
@@ -62,9 +84,10 @@ p{
     }
     &__description{
       width: 80%;
+      padding: 0.4em;
       &>p{
         @include ellipsis;
-        margin: 0 0.5em 1em;
+        margin: 0 0 0.5em 0.5em;
       }
     }
         &__check{
@@ -86,9 +109,7 @@ p{
 
 .check2{
   @include check;
-  
 }
-
 
 .box__layout:hover{
   .box__layout__description{
@@ -110,18 +131,21 @@ p{
 }
 
 .order{
-  margin: auto;
-  &>button{
-    width: 100%;
-  };
+  margin: 20px auto;
+  // &>button{
+  //   // width: 100%;
+  // };
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
+    margin-top: 20px;
   }
   100%{
     opacity: 1;
+    margin-top: 0px;
+    
   }
 }
 
@@ -187,13 +211,13 @@ p{
 
 
 canvas{
-  height: 5px;
-  width: 15%;
+  height: 3px;
+  width: 12%;
   background-color: $tertiary-color;
-  margin: 0.5em 0 0 0;
 }
 
 h4{
-  margin: 0.5em 1em;
+  @include ellipsis;
+  margin: 0.5em 0 0.5em 0.5em;
   font-weight: bolder;
 }

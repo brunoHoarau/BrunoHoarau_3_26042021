@@ -497,7 +497,7 @@ footer > div, footer a {
   overflow: hidden;
   -webkit-box-shadow: 1px 2px 17px -3px #a1a1a1;
   box-shadow: 1px 2px 17px -3px #a1a1a1;
-  margin: 0 auto 20px;
+  margin: 0 0 20px;
 }
 .restaurants__card__new {
   position: absolute;
@@ -550,15 +550,21 @@ footer > div, footer a {
     height: 20vw;
   }
   .restaurants__card__new {
-    margin: 1% 0% 1% 12%;
     padding: 1vw;
     left: auto;
   }
 }
-@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
-  .restaurants__card {
-    margin: 0 0 20px;
+@media screen and (min-device-width: 1024px) and (max-device-width: 1340px) {
+  .restaurants__card__new {
+    margin: 1% 0% 1% 10%;
   }
+}
+@media screen and (min-device-width: 1341px) {
+  .restaurants__card__new {
+    margin: 1% 0% 1% 12%;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
   .restaurants__card__new {
     margin: 3% 0% 5% 12%;
     padding: 3vw;

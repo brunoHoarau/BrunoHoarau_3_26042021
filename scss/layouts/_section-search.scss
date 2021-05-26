@@ -2,7 +2,6 @@
   @include d-flex-center;
   flex-direction: column;
   align-content: center;
-  // text-align: center;
   background-color: $bg-color-grey-dark ;
     &__form{
       @include d-flex-center;
@@ -28,7 +27,7 @@
     }
     
   }
-  
+  // animation : name | animation-duration | animation-timing-fonction | animation-iteration-count | animation-fill-mode
   animation: display 3s linear 1 both;
   }
 

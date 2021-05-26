@@ -890,46 +890,12 @@ h4 {
     font-weight: bold;
   }
 
-  .check2 {
-    background-color: #99E2D0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 0%;
-    margin-left: -10%;
-  }
-
   .order {
     display: flex;
     flex-basis: 100%;
   }
   .order > button {
     margin: auto;
-  }
-
-  @keyframes textoverflow {
-    100% {
-      width: 65%;
-    }
-  }
-  @keyframes checkslide {
-    0% {
-      transform: scaleX(0);
-    }
-    100% {
-      transform: scaleX(1);
-      width: 20%;
-      margin-left: 0%;
-    }
-  }
-  @keyframes rotation-180 {
-    0% {
-      transform: rotate(-180deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {

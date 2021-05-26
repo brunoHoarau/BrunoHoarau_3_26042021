@@ -42,13 +42,6 @@
 }
 
 
-.check2{
-  @include check;
-  
-}
-
-
-
 .order{
   display: flex;
   flex-basis: 100%;
@@ -58,34 +51,5 @@
 }
 
 
-@keyframes textoverflow {
-  0% {
-  }
-  100% {
-    width: 65%;
-  }
-}
 
-@keyframes checkslide {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-    width: 20%;
-    margin-left: 0%;
-    
-  }
-}
-
-@keyframes rotation-180 {
-  0% {
-    transform: rotate(-180deg);
-  } 
-
-  100%{
-    transform: rotate(0deg);
-  }
-  
-}
 }

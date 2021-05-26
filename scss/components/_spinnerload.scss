@@ -1,3 +1,5 @@
+//  Spinner load animation 
+
 .spinnerload{
   color: $primary-color;
   transform: scale(0);
@@ -19,7 +21,7 @@
     -moz-text-fill-color: transparent;
 }
 
-
+//  spinner's rotation and opacity 
 
 @keyframes spinnanim {
   0% {
@@ -32,6 +34,8 @@
   }
 
 }
+
+// fade out all element except spinner 
 
 @keyframes display {
   0%{

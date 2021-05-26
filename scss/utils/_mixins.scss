@@ -1,8 +1,10 @@
+// object general for reuse 
 @mixin d-flex-center {
   display: flex;
   justify-content: center;
 }
 
+// general layout for section
 @mixin layout-section {
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@
   padding: 40px 5vw; 
 }
 
+// check genreal display 
 @mixin check {
   background-color: $tertiary-color;
           color: white;
@@ -21,6 +24,7 @@
           
 }
 
+// button general display 
 @mixin button {
   border: none;
   background: $primary-gradiente;
@@ -28,6 +32,7 @@
   color: white;
 }
 
+// to hide text and replace by "..." 
 @mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;

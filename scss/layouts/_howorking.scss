@@ -1,4 +1,6 @@
+// how working the site 
 .howorking{
+  // animation name| duration | timing-function | iteration-count | fill-mode
   animation: display 3s linear 1 both;
   @include layout-section;
   &>ul{

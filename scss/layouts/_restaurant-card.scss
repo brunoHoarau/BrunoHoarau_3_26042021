@@ -1,6 +1,6 @@
 .restaurants{
+  // animation : name | animation-duration | animation-timing-function | animation-iteration-count | animation-fill-mode;
   animation: display 3s linear 1 both;
-  // @include d-flex-center;
   @include layout-section;
   background-color: $bg-color-grey-light;
     &__card{
